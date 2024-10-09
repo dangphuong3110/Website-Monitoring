@@ -1,0 +1,282 @@
+body {
+    overflow-y: auto;
+}
+
+span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    background-color: #f6f9fc;
+    border-bottom: 2px solid #157347;
+}
+
+#featured-monitoring {
+    background-image: url("../../assets/image/background/background-monitoring3.png");
+    background-repeat: round;
+    max-width: none;
+}
+
+.sidebar-item {
+    background-image: url("../../assets/image/background/background-monitoring2.png");
+    background-repeat: round;
+    max-width: none;
+    background-color: #157347;
+}
+
+.up-website {
+    border: 2px solid #8AD6B1;
+    border-radius: 7px;
+    background-color: #E9F8F1;
+}
+
+.down-website {
+    border: 2px solid #F8B4A8;
+    border-radius: 7px;
+    background-color: #FEF1EF;
+}
+
+.slow-website {
+    border: 2px solid #FFCA2C;
+    border-radius: 7px;
+    background-color: #fff3d8;
+}
+
+.monitor-detail-stage {
+    border-left: 2px solid #157347;
+}
+
+.new-monitor {
+    font-size: 16px;
+    /*font-weight: 700;*/
+}
+
+.new-monitor-btn {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.search-global .search {
+    border-color: #131517;
+}
+
+.search-global .search::placeholder {
+    color: #b4b1b1;
+}
+
+input[type=search] {
+    border: 1px solid;
+    border-radius: 7px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.3);
+    height: 34px;
+}
+
+input[type=search]:focus {
+    border-color: #a14ee1;
+}
+
+.sort-monitors {
+    background-color: #c2bfbf;
+    margin-bottom: 0;
+    border-left: none;
+    border-right: none;
+    border-top-color: rgba(255,255,255,.6);
+    border-bottom-color: rgba(0,0,0,.2);
+    border-radius: 0;
+}
+
+.sort-monitors:hover {
+    background-color: #cbc8c8;
+}
+
+.sort-monitors a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+
+#main-side-menu {
+    background-color: #EDF3F6;
+    display: block;
+    height: 69.5vh;
+    overflow-y: auto;
+}
+
+#btn-sort-monitors:hover {
+    cursor: pointer;
+}
+
+#sort-monitors {
+    background-color: #cbc8c8;
+}
+
+#sort-monitors p,
+#sort-monitors p a {
+    font-size: 12px;
+    color: #000;
+}
+
+#sort-monitors p a:hover {
+    text-decoration: underline;
+}
+
+.modal-content {
+    background-color: #F0F2F8;
+}
+
+.modal-footer {
+    border-top-color: #b4b7be;
+    box-shadow: inset 0 1px 0 #fff;
+}
+
+.new-monitor .card-header i,
+.new-monitor .card-header span {
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+#newMonitorModal .card {
+    background-color: #F5F6F9;
+}
+
+.new-monitor .card-title {
+    color: #3399FE;
+    padding-bottom: 7px;
+    border-bottom: 1px dashed #BEC2C4;
+}
+
+.form-check {
+    padding: 0;
+}
+
+.modal-footer {
+    background-color: #EAEDEF;
+}
+
+#main-side-content {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#nav-tab .nav-link {
+    width: 10%;
+    min-width: 100px;
+    color: #000;
+}
+
+#nav-tab .nav-link span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#nav-tab .nav-link.active {
+    color: #157347;
+    font-weight: 700;
+}
+
+#nav-tab .nav-link:hover {
+    cursor: default;
+}
+
+#nav-tab .nav-link .icon-exit-tab {
+    padding: 2px 4px;
+}
+
+#nav-tab .nav-link .icon-exit-tab:hover {
+    background-color: #cacfd2;
+    border-radius: 3px;
+}
+
+#nav-tab .nav-link:hover {
+    background-color: #e5e9ea;
+}
+
+#nav-tab .nav-link.active {
+    background-color: #fff;
+}
+
+.add-tab {
+    border: none;
+    line-height: 33px;
+}
+.add-tab:hover {
+    background-color: #e5e9ea;
+}
+
+
+/*LOADER*/
+.loader {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #157347 #157347 transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent #DC3545 #DC3545;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+span.required {
+    font-size: 16px;
+    color: red;
+}
+
+.tooltip-inner {
+    max-width: 350px;
+    width: 350px;
+    font-size: 16px;
+    white-space: pre-line;
+}
+
+
+
+
